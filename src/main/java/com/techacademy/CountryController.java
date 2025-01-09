@@ -52,7 +52,7 @@ public class CountryController {
 
     // ----- 削除画面 -----
     @GetMapping(value = { "/delete/{code}/" })
-    public String postCountry(@PathVariable(name = "code", required = false) String code, Model model) {
+    public String getdeleteCountry(@PathVariable(name = "code", required = false) String code, Model model) {
         // codeが指定されていたら検索結果、無ければ空のクラスを設定
         Country country = code != null ? service.getCountry(code) : new Country();
         // Modelに登録
